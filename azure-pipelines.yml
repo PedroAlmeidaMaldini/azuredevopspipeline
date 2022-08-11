@@ -14,5 +14,3 @@ stages:
         workspace:
           clean: all
         displayName: Build
-        steps:
-        - bash: |
