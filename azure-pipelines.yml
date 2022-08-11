@@ -16,4 +16,3 @@ stages:
         displayName: Build
         steps:
         - bash: |
-          echo $(variavel)
