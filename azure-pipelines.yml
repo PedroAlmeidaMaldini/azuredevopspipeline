@@ -1,0 +1,21 @@
+---
+name: $(Date:yyyyMMdd)$(Rev:.r)
+
+variables:
+  - name: variavel
+    value: "Hello from pipilini"
+
+stages:
+  - stage: build stage
+    displayName: building stage
+    pool: "ubuntu-latest"
+    jobs:
+      - job: BuildValidation
+        workspace:
+          clean: all
+        displayName: Build
+        steps:
+        - bash: |
+          echo $(variavel)
+          
+          displayName: 'Bash Script'
